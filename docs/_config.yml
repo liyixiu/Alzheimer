@@ -1,1 +1,3 @@
-theme: jekyll-theme-leap-day
+```yml
+    theme: jekyll-theme-leap-day
+    ```
