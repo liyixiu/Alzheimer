@@ -94,7 +94,7 @@ end
 
 ### Small image
 
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+![666](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/1.png?raw=true)
 
 ### Large image
 
