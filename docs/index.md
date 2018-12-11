@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Introduction](./index.html).| [Exploratory data analysis](./EDA.html).| [Models](./Models.html).| [Conclusion](./Conclusion.html).| [References](./References.html).
+[Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
 
 # Project Description
 **Classification of Alzheimer’s Disease, Mild Cognitive Impairment, and Cognitively-unimpaired Individuals using Machine Learning Algorithms and Regression models**
@@ -12,5 +12,5 @@ Alzheimer’s disease (AD) is the most common type of dementia and is a complica
 ## Aim 1: 
 Build a classification model using demographic information, neurological exams, screening labs, vital signs, cognitive assessments, biospecimen collections, medication, diagnosis summary, lumbar puncture, genetic, MRI, PET image, and biospecimen data, etc. to classify individual’s disease status (non-disease/control, mild cognitive impairment and Alzheimer's disease). Logistic regression and machine learning classification algorithms (boosting, random forest, etc.) will be used to find the optimal model. 
 
-##Aim 2: 
+## Aim 2: 
 Find the most cost-efficient way with least amount covariates to classify people’s disease status.  Easiness of getting the information about certain covariate will be considered during the selection of covariates, as we want to maximize the economic efficiency. 
