@@ -29,3 +29,11 @@ Next, we identified continuous and categorical variables and converted the later
 Next, we plot the distribution of the variable across non-disease control (CN) participants, MCI participants, and AD participants. Shown in the below plots, we could see that AD, MCI, and CN are not very different across age(AGE), education level (PTEDUCAT), and intracerebral volume (ICV). The levels of Average FDG-PET of angular, temporal, and posterior cingulate
 (FDG), Mini-Mental State Examination(MMSE), Hippocampus, WholeBrain, Entorhinal, Fusiform, middle temporal gyrus (MitTemp), etc. are negatively associated with cognitive impairment severity, while the scores of Clinical Dementia Rating-Sum of Boxes (CDRSB), FAQ, Ventricles, etc. are positively associated with cognitive impairment severity.  
 
+**Fig 3. Distribution of continuous variables grouped by disease status**
+![fig3](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/3.jpeg?raw=true)
+
+**Fig 4. Distribution of categorical variables grouped by disease status**
+![fig3](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/4.jpeg?raw=true)
+
+According to the bar charts, the three health status have different distribution on demographic features. AD has a higher distribution in male, non-Hispanic, especially white, married people, and with APOE4=1. However, we are not sure about the determinants of classification yet since the results may due to the sampling method.
+
