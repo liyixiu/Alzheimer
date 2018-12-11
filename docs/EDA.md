@@ -11,7 +11,7 @@ We use data from ADNI dataset. This dataset is a longitudinal dataset, participa
 For the use of exploratory data analysis (EDA), we first deleted observations that are not baseline values and observations that the response value ‘DX’ is missing. Since we just included necessary, not repetitive, baseline data and non-patient reported data, we dropped 58 variables inclduing ‘PTID’, ’SITE’, ‘COLPROT’, ‘ORIGPROT’, ‘EXAMDATE’, and all variables do not end with ‘bl’, ‘RID’, ‘Month’, ‘M’, ‘updated_stamp’, ‘FLDSTRNG’, ‘FSVERSION’, and all Ecog test results by the patients. Moreover, considering the completeness of data, we dropped variables that have missing values more than 80%. 
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
-[percent of not nans for each var](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/1.jpeg?raw=true)
+![percent of not nans for each var](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/1.jpeg?raw=true)
 
 Next, we identified continuous and categorical variables and converted the later to numbers for the convenience of further manipulation. To explore the current dataset, we first took a look at the correlations between any pairs of the variables without imputing missing values because the loss of data is small when doing correlation analysis, the probability of two variables either has a NaN is small, so we just delete any pair that either variable has a NaN. And the correlation matrix is drawn as below. 
 
