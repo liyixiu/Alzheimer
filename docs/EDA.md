@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#[Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
+[Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
 
 # Exploratory data analysis
 
@@ -15,7 +15,7 @@ For the use of exploratory data analysis (EDA), we first deleted observations th
 
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
-![fig1](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/1.jpeg?raw=true)
+![fig1](./figures/1.jpeg)
 
 ## Correlation Analysis of Variables
 
