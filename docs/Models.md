@@ -31,5 +31,34 @@ X_train, X_test, y_train, y_test = train_test_split(X_filled_ii, Y, test_size=0.
 print(X_train.shape, y_train.shape)
 print(X_test.shape, y_test.shape)
 ```
-(1415, 33) (1415,)
+(1415, 33) (1415,)\\
 (354, 33) (354,)
+
+## Baseline Model
+
+In order to find the optimal approach for the classification of AD, MCI, and controls, we compare several baseline models using different algorithms with random forest, decision tree, simple and polynomial logistic regression,  boosting, LDA and QDA. 
+
+Covariates are selected based on expert knowledge and previous publications. Demographic variables (race, ethnicity, age, years of education, marriage status, etc.) and biological information (FDG, CDR-SB, MMSE, ventricles volume, hippocampus volume, whole brain volume, etc.) were included as predictors. All cognitive tests are excluded because these tests are similar assessments as AD diagnosis. 
+
+To compare the performance of the above classification methods, we output the accuracy scores for both training set and test set using all the different models. Decision tree method yields the highest accuracy score, and random forest ranked the second highest. Since the decision tree method may yield high bias when the depth=3 (the highest accuracy of the decision tree method), we would like to choose random forest as our final model for classification. 
+
+### Logistic Regression Model
+
+```python
+# Logistic Regression
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegressionCV
+from sklearn.pipeline import make_pipeline
+ovr = LogisticRegressionCV(multi_class = 'ovr', cv = 5)
+ovr_model = LogisticRegressionCV(multi_class = 'ovr', cv = 5).fit(X_train,y_train)
+polynomial_logreg_estimator = make_pipeline(
+    PolynomialFeatures(degree = 2, include_bias = False),
+    LogisticRegressionCV(multi_class = "ovr", cv = 5))
+poly_model = polynomial_logreg_estimator.fit(X_train, y_train)
+print('Accuracy of logistic regression model on train set is', np.mean(cross_val_score(ovr_model, X_train, y_train, cv = 5)))
+y_pred_test = ovr_model.predict(X_test)
+print('Accuracy of logistic regression model on test set is', accuracy_score(y_test, y_pred_test))
+```
+Accuracy of logistic regression model on train set is 0.5766787099561508\\
+Accuracy of logistic regression model on test set is 0.5790960451977402
+
