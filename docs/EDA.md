@@ -119,7 +119,7 @@ plt.xticks(list(df5.columns), rotation=90)
 plt.axhline(20, c = 'r')
 plt.ylabel('percent of vaid data (%)')
 plt.show()
-d6 = df5.drop(bad2, axis = 1)
+df6 = df5.drop(bad2, axis = 1)
 print(len(list(df5.columns))-len(list(df6.columns)), 'variables are deleted.')
 print('Deleted variables are:', bad2)
 ```
