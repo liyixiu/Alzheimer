@@ -87,6 +87,7 @@ for v in df5.columns:
         df5[v].fillna('Unknown', inplace = True) #replace all NaN first into 'Unknown'
         catdict[v] = list(set(df5[v]))
         catdict['APOE4'] = [0,1,2]
+        catdict['DX'] = ['CN','MCI','Dementia']
         if 'Unknown' in catdict[v]:
             catdict[v].remove('Unknown') #'Unknown' should not participate in categorizing
         for i in range(len(catdict[v])):
@@ -102,7 +103,7 @@ Categorical variables are: ['APOE4', 'PTGENDER', 'PTETHCAT', 'PTRACCAT', 'PTMARR
 Continuous variables are ['AGE', 'PTEDUCAT', 'FDG', 'PIB', 'AV45', 'CDRSB', 'ADAS11', 'ADAS13', 'MMSE', 'RAVLT_immediate', 'RAVLT_learning', 'RAVLT_forgetting', 'RAVLT_perc_forgetting', 'FAQ', 'MOCA', 'EcogSPMem', 'EcogSPLang', 'EcogSPVisspat', 'EcogSPPlan', 'EcogSPOrgan', 'EcogSPDivatt', 'EcogSPTotal', 'Ventricles', 'Hippocampus', 'WholeBrain', 'Entorhinal', 'Fusiform', 'MidTemp', 'ICV'] 
 
 The dictionary for values of categorical variable corresponding to their original names: 
- {'APOE4': [0, 1, 2], 'PTGENDER': ['Female', 'Male'], 'PTETHCAT': ['Not Hisp/Latino', 'Hisp/Latino'], 'PTRACCAT': ['Asian', 'White', 'More than one', 'Black', 'Am Indian/Alaskan', 'Hawaiian/Other PI'], 'PTMARRY': ['Never married', 'Divorced', 'Married', 'Widowed'], 'DX': ['CN', 'MCI', 'Dementia']}
+ {'APOE4': [0, 1, 2], 'DX': ['CN', 'MCI', 'Dementia'], 'PTGENDER': ['Male', 'Female'], 'PTETHCAT': ['Not Hisp/Latino', 'Hisp/Latino'], 'PTRACCAT': ['More than one', 'Hawaiian/Other PI', 'Black', 'Asian', 'White', 'Am Indian/Alaskan'], 'PTMARRY': ['Never married', 'Married', 'Widowed', 'Divorced']}
 
 ```python
 #cout the NaNs in each variables, drop variables that has percentage of NaNs over 80%.
