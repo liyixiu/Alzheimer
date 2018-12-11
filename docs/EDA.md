@@ -123,8 +123,8 @@ d6 = df5.drop(bad2, axis = 1)
 print(len(list(df5.columns))-len(list(df6.columns)), 'variables are deleted.')
 print('Deleted variables are:', bad2)
 ```
-See **Fig 1**
-1 variables are deleted.
+See **Fig 1**\\
+1 variables are deleted.\\
 Deleted variables are: ['PIB']
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
