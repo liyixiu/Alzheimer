@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# [Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
+[Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
 
 # Project Description
 **Classification of Alzheimer’s Disease, Mild Cognitive Impairment, and Cognitively-unimpaired Individuals using Machine Learning Algorithms and Regression models**
