@@ -15,3 +15,6 @@ For the use of exploratory data analysis (EDA), we first deleted observations th
 
 Next, we identified continuous and categorical variables and converted the later to numbers for the convenience of further manipulation. To explore the current dataset, we first took a look at the correlations between any pairs of the variables without imputing missing values because the loss of data is small when doing correlation analysis, the probability of two variables either has a NaN is small, so we just delete any pair that either variable has a NaN. And the correlation matrix is drawn as below. 
 
+**Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**
+![Correlation matrix](https://github.com/liyixiu/Alzheimer/blob/master/docs/figures/2.jpeg?raw=true)
+
