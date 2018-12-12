@@ -1,9 +1,8 @@
 ---
-layout: default
----
-
----
 layout: page
+title: "Members"
+description: "Collaborators working on this project."
+header-img: "img/home-bg.jpg"
 ---
 
 [Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
