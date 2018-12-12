@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Introduction"
-description: "Collaborators working on this project."
+description: "Description of our project and aims"
 header-img: "img/home-bg.jpg"
 ---
 

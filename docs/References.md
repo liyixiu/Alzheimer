@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "References"
-description: "Collaborators working on this project."
+description: "literature and database???"
 header-img: "img/home-bg.jpg"
 ---
 

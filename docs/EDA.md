@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "EDA"
-description: "Why use Project Pages?"
+description: "Exploratory data analysis"
 header-img: "img/home-bg.jpg"
 ---
 

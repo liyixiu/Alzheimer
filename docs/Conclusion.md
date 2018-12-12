@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Conclusion"
-description: "Collaborators working on this project."
+title: "Results and Conclusion"
+description: "???"
 header-img: "img/home-bg.jpg"
 ---
 

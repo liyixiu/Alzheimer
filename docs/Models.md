@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Models"
-description: "Why use Project Pages?"
+description: "Model fitting and tuning based on python"
 header-img: "img/home-bg.jpg"
 ---
 
