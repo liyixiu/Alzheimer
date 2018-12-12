@@ -42,10 +42,6 @@ df3 = pd.DataFrame(df3)
 print(len(df2)-len(df3), 'observation deleted.')
 print(len(df3), 'observations left.')
 ```
-11233 observation deleted. And variable "VISCODE" is deleted.
-15 observation deleted.
-1769 observations left.
-
 ```python
 #drop variables that are selected based on the criteria above
 bad = ['PTID','SITE','COLPROT','ORIGPROT', 'EXAMDATE', 'DX_bl', 'EXAMDATE_bl', 
@@ -60,9 +56,6 @@ df4 = df3.drop(bad, axis = 1)
 print(len(list(df3.columns))-len(list(df4.columns)), 'variables are deleted.')
 print('Remaining variables are:', list(df4.columns))
 ```
-58 variables are deleted.
-Remaining variables are: ['AGE', 'PTGENDER', 'PTEDUCAT', 'PTETHCAT', 'PTRACCAT', 'PTMARRY', 'APOE4', 'FDG', 'PIB', 'AV45', 'CDRSB', 'ADAS11', 'ADAS13', 'MMSE', 'RAVLT_immediate', 'RAVLT_learning', 'RAVLT_forgetting', 'RAVLT_perc_forgetting', 'FAQ', 'MOCA', 'EcogSPMem', 'EcogSPLang', 'EcogSPVisspat', 'EcogSPPlan', 'EcogSPOrgan', 'EcogSPDivatt', 'EcogSPTotal', 'Ventricles', 'Hippocampus', 'WholeBrain', 'Entorhinal', 'Fusiform', 'MidTemp', 'ICV', 'DX']
-
 ```python
 #Turn all values of categorical variables into categories named in 0, 1, 2, 3...while keeping NaN and turining all 'Unknown's to NaN
 
@@ -101,13 +94,6 @@ print('Categorical variables are:', cat, '\n')
 print('Continuous variables are', contin, '\n')
 print('The dictionary for values of categorical variable corresponding to their original names: \n', catdict)
 ```
-Categorical variables are: ['APOE4', 'PTGENDER', 'PTETHCAT', 'PTRACCAT', 'PTMARRY', 'DX'] 
-
-Continuous variables are ['AGE', 'PTEDUCAT', 'FDG', 'PIB', 'AV45', 'CDRSB', 'ADAS11', 'ADAS13', 'MMSE', 'RAVLT_immediate', 'RAVLT_learning', 'RAVLT_forgetting', 'RAVLT_perc_forgetting', 'FAQ', 'MOCA', 'EcogSPMem', 'EcogSPLang', 'EcogSPVisspat', 'EcogSPPlan', 'EcogSPOrgan', 'EcogSPDivatt', 'EcogSPTotal', 'Ventricles', 'Hippocampus', 'WholeBrain', 'Entorhinal', 'Fusiform', 'MidTemp', 'ICV'] 
-
-The dictionary for values of categorical variable corresponding to their original names: 
- {'APOE4': [0, 1, 2], 'DX': ['CN', 'MCI', 'Dementia'], 'PTGENDER': ['Male', 'Female'], 'PTETHCAT': ['Not Hisp/Latino', 'Hisp/Latino'], 'PTRACCAT': ['More than one', 'Hawaiian/Other PI', 'Black', 'Asian', 'White', 'Am Indian/Alaskan'], 'PTMARRY': ['Never married', 'Married', 'Widowed', 'Divorced']}
-
 ```python
 #cout the NaNs in each variables, drop variables that has percentage of NaNs over 80%.
 perc = []
@@ -127,9 +113,6 @@ df6 = df5.drop(bad2, axis = 1)
 print(len(list(df5.columns))-len(list(df6.columns)), 'variables are deleted.')
 print('Deleted variables are:', bad2)
 ```
-See **Fig 1**\\
-1 variables are deleted.\\
-Deleted variables are: ['PIB']
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/1.jpeg" alt="1" width="750"/>
@@ -171,7 +154,6 @@ for i in range(len(continuous)):
     fig.tight_layout()
     ax[i].set_xticklabels(['CN', 'MCI','AD'])
 ```
-See **Fig 3**
 
 **Fig 3. Distribution of continuous variables grouped by disease status**
 <img src="https://yueli1201.github.io/Alzheimer/figures/3.jpeg" alt="3" width="750"/>
@@ -198,7 +180,6 @@ for i in covariates:
         fig.tight_layout()
         a = a + 1
 ```
-See **Fig 4**
 
 **Fig 4. Distribution of categorical variables grouped by disease status**
 <img src="https://yueli1201.github.io/Alzheimer/figures/4.jpeg" alt="4" width="750"/>
@@ -230,7 +211,5 @@ X_train, X_test, y_train, y_test = train_test_split(X_filled_ii, Y, test_size=0.
 print(X_train.shape, y_train.shape)
 print(X_test.shape, y_test.shape)
 ```
-(1415, 33) (1415,)\\
-(354, 33) (354,)
 
 So now we are ready to explore the two questions using the upcomming regression models and machine learning algorithms. 
