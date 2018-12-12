@@ -33,5 +33,5 @@ According to the Alzheimer’s Association, individuals who have been diagnosed 
 ## 4. Should we use the longitudinal data for our classification model?
 With in a longitudinal data, the information will be highly correlated with in each individual. And within a longitudinal dataframe, the assumption that random effects are normally distributed in those at risk at each event time is probably unreasonable. If the covariate is predictive of survival, patients whose covariates trajectories have the steepest negative slopes may be at higher risk for mortality, and get censored early. This may cause the random effects having a distributional shift toward a nonnormal distribution as time progresses. Due to these problems, we decided that we are going to only use the data collected at baseline to build up our classification model.
 
-Reference: 
-Wulfsohn, M.S. and Tsiatis, A.A., 1997. A joint model for survival and longitudinal data measured with error. Biometrics, pp.330-339.
+Reference: \\
+_Wulfsohn, M.S. and Tsiatis, A.A., 1997. A joint model for survival and longitudinal data measured with error. Biometrics, pp.330-339._
