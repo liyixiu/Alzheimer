@@ -131,7 +131,7 @@ See **Fig 1**\\
 Deleted variables are: ['PIB']
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
-![fig1](./figures/1.jpeg = 750x) <img src="1.jpeg" alt="1" width="200"/>
+<img src="./figures/1.jpeg" alt="1" width="800"/>
 
 ## Correlation Analysis of Variables
 
