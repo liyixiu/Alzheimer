@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Members"
+title: "Conclusion"
 description: "Collaborators working on this project."
 header-img: "img/home-bg.jpg"
 ---
