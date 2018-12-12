@@ -1,5 +1,8 @@
 ---
-layout: default
+layout: page
+title: "About"
+description: "Why use Project Pages?"
+header-img: "img/home-bg.jpg"
 ---
 
 [Introduction](./index.html).|  [Exploratory data analysis](./EDA.html).|  [Models](./Models.html).|  [Conclusion](./Conclusion.html).|  [References](./References.html).
