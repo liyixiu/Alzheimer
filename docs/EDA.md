@@ -5,8 +5,10 @@ description: "Exploratory data analysis"
 header-img: "img/home-bg.jpg"
 ---
 
+### The general EDA questions we want to explore are:
+### How AD, MCI, and CN distribute across different variables? 
+### What variables contribute significantly to the classification of AD, MCI, and CN?
 
-# Exploratory data analysis
 
 ## Data Description
 
@@ -149,7 +151,7 @@ plt.show()
 **Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/2.jpeg" alt="2" width="750"/>
 
-## Distribution Exloration for Variables Grouped by Disease Status
+## Distribution Exploration for Variables Grouped by Disease Status
 
 Next, we plot the distribution of the variable across non-disease control (CN) participants, MCI participants, and AD participants. Shown in the below plots, we could see that AD, MCI, and CN are not very different across age(AGE), education level (PTEDUCAT), and intracerebral volume (ICV). The levels of Average FDG-PET of angular, temporal, and posterior cingulate
 (FDG), Mini-Mental State Examination(MMSE), Hippocampus, WholeBrain, Entorhinal, Fusiform, middle temporal gyrus (MitTemp), etc. are negatively associated with cognitive impairment severity, while the scores of Clinical Dementia Rating-Sum of Boxes (CDRSB), FAQ, Ventricles, etc. are positively associated with cognitive impairment severity.  
@@ -203,3 +205,33 @@ See **Fig 4**
 <img src="https://yueli1201.github.io/Alzheimer/figures/4.jpeg" alt="4" width="750"/>
 
 According to the bar charts, the three health status have different distribution on demographic features. AD has a higher distribution in male, non-Hispanic, especially white, married people, and with APOE4=1. However, we are not sure about the determinants of classification yet since the results may due to the sampling method.
+
+## Covariates Selection and Imputation of Missing Data
+
+We have a longitudinal dataset. But for our classification analysis, we just want to keep the baseline information to build classification models. Because, first, we want to find a cost-efficient way to help the classification of AD. Secondly, in the longitudinal data, the information is highly correlated within each individual. 'Examdate', 'update_stamp', 'FLDSTRENG', 'FSVERSION' are  are not useful for the mdoel because they are not the relavent information of patients.  So, we excluded them from analysis. According many previous publications (ref), the patient everyday cognition scale (Ecog) is very uninformative, especially among those dementia people. So all EcogPt variables were excluded from our analysis. Only very few participants in ADNI1 (less than 5% of the total data) have information on Pittsburgh compound B (PIB) test. Therefore, this variable was excluded from our analysis. 
+
+Among the rest of the data, Participants in ADNI1 don’t have information on Everyday Cognition Scale (Ecog), Montreal Cognitive Assessment (MOCA), and AV45. Participants from ADNI3 lack information on APOE4, FDG-PET, AV45, Hippocampus volume, whole brain status, Entorhinal, Fusiform, middle temporal gyrus (MidTemp), intracerebral volume (ICV), Ventricles. But as there are only 46 participants in ADNI3, it will not cause a large proportion missing. There are some other randomly missing data. When combine participants recruited based on four different protocols, we assumed that the data were missing at random.  We used IterativeImputer method in fancyimpute (A strategy for imputing missing values by modeling each feature with missing values as a function of other features in a round-robin fashion) to impute these missing data. 
+
+```python
+# Impute missing data
+from fancyimpute import KNN, NuclearNormMinimization, SoftImpute, IterativeImputer, BiScaler
+
+X=df6.drop(['DX'], axis=1)
+Y=df6['DX']
+columns = X.columns
+
+X_filled_ii = IterativeImputer().fit_transform(X)
+X_filled_ii = pd.DataFrame(X_filled_ii)
+X_filled_ii.columns = X.columns
+```
+
+```python
+# create training and testing vars
+X_train, X_test, y_train, y_test = train_test_split(X_filled_ii, Y, test_size=0.2)
+print(X_train.shape, y_train.shape)
+print(X_test.shape, y_test.shape)
+```
+(1415, 33) (1415,)\\
+(354, 33) (354,)
+
+So now we are ready to explore the two questions using the upcomming regression models and machine learning algorithms. 
