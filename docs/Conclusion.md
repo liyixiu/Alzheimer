@@ -29,7 +29,7 @@ accuracy_table
 ```
 
 **Table 1. Accuracy table (Disease vs. Non-disease)**
-<img src="https://yueli1201.github.io/Alzheimer/figures/t1.png" alt="t1" width="750"/>
+<img src="https://yueli1201.github.io/Alzheimer/figures/t1.png" alt="t1" width="350"/>
 
 However, accuracy score alone just told us the predictive capability of models, thus ROC curve and AUC calculations were further explored to provide the information of classification. While the baseline logistic model gave the lowest classification performance, the other models all have pretty good AUC score. We will choose random forest and boosting as our final models as they have excellent performance in both reproducibility and classification.
 
@@ -87,11 +87,78 @@ AUC_table
 Likewise, we printed an accuracy table and a ROC curve to compare the performance of reproducibility and classification for the above models. Similar to the previous comparison, baseline logistic gave the lowest accuracy score, while random forest, boosting still have the highest performance in terms of reproducibility.
 
 ```python
+## comparasion of accuracy of different model
+classifiers=[ovr_model2, rf2_best_model, best_tree_model2, AdaBoost_model2, qda_model2]
+names = ['baseline logistic','random forest', 'decision tree', 'boosting','qda']
+accuracy_table=pd.DataFrame()
+j=0
+for i in classifiers:
+    accuracy_table.loc[names[j],r'$ accuracy(train)$']=accuracy_score(y_train2, i.predict(X_train2))
+    accuracy_table.loc[names[j],r'$ accuracy(test)$']=accuracy_score(y_test2, i.predict(X_test2))
+    j=j+1
 
+accuracy_table.loc['optimized logistic',r'$ accuracy(train)$']=accuracy_score(y_train2, ovr_model_sparse2.predict(X_train_restrict2))
+accuracy_table.loc['optimized logistic',r'$ accuracy(test)$']=accuracy_score(y_test2, ovr_model_sparse2.predict(X_test_restrict2))
+accuracy_table
 ```
 
+**Table 2. Accuracy table (AD vs. MCI)**
+<img src="https://yueli1201.github.io/Alzheimer/figures/t2.png" alt="t2" width="350"/>
+
+In terms of classification performance, we drew ROC curved to visualize the comparisons and calculated corresponding AUC for each model. As we could see, random forest and boosting performed the best for both accuracy score and AUC.
+
+```python
+## ROC for decision tree
+fpr_dt21, tpr_dt21, thres_dt21 = roc_curve(y_test2, best_tree2.predict_proba(X_test2)[:,1])
+fpr_dt22, tpr_dt22, thres_dt22 = roc_curve(y_test2, np.zeros((len(y_test2), 1)))
+auc_dt21 = roc_auc_score(y_test2, best_tree2.predict_proba(X_test2)[:,1])
+auc_dt22 = roc_auc_score(y_test2, np.zeros((len(y_test2), 1)))
+### ROC for bset random forest
+fpr_qda21, tpr_qda21, thres_qda21 = roc_curve(y_test2, qda_model2.predict_proba(X_test2)[:,1])
+auc_qda21 = roc_auc_score(y_test2, qda_model2.predict_proba(X_test2)[:,1])
+###ROC for boosting
+fpr_boo21, tpr_boo21, thres_boo21 = roc_curve(y_test2, AdaBoost_model2.predict_proba(X_test2)[:,1])
+auc_boo21 = roc_auc_score(y_test2, AdaBoost_model2.predict_proba(X_test2)[:,1])
+###ROC for random forest
+fpr21_best, tpr21_best, thres21_best = roc_curve(y_test2, rf2_best.predict_proba(X_test2)[:,1])
+auc21_best = roc_auc_score(y_test2, rf2_best.predict_proba(X_test2)[:,1])
+###ROC for logistic regression
+fpr_ovr21, tpr_ovr21, thres_ovr21 = roc_curve(y_test2, ovr_model_sparse2.predict_proba(X_test_restrict2)[:,1])
+auc_ovr21 = roc_auc_score(y_test2, ovr_model_sparse2.predict_proba(X_test_restrict2)[:,1])
+
+fig, ax = plt.subplots(1,1)
+ax.plot(fpr_dt21, tpr_dt21, '-', alpha=0.8, label='Best decision tree' % (auc_dt21 ))
+ax.plot(fpr_qda21, tpr_qda21, '-', alpha=0.8, label='QDA' % (auc_qda21 ))
+ax.plot(fpr_boo21, tpr_boo21, '-', alpha=0.8, label='Boosting' % (auc_boo21 ))
+ax.plot(fpr21_best, tpr21_best, '-', alpha=0.8, label='Best random forest' % (auc21_best))
+ax.plot(fpr_ovr21, tpr_ovr21, '-', alpha=0.8, label='Regression' % (auc_ovr21))
+ax.plot(fpr_dt22, tpr_dt22, '-', alpha=0.8, label=' 0 classifier' % (auc_dt22))
+plt.title("ROC curves for AD and MCI")
+plt.xlabel('1-specificity')
+plt.ylabel('sensitivity')
+plt.legend()
+plt.show()
+```
+```python
+## comparasion of accuracy of different model
+classifiers2=[ovr_model2, rf2_best_model, best_tree_model2, AdaBoost_model2, qda_model2]
+names = ['baseline regression','random forest', 'decision tree', 'boosting','qda']
+AUC_table2=pd.DataFrame()
+j=0
+for i in classifiers2:
+    AUC_table2.loc[names[j],r'$ AUC $']=roc_auc_score(y_test2, i.predict_proba(X_test2)[:,1])
+    j=j+1
+
+AUC_table2.loc['optimized logistic',r'$ AUC $']=accuracy_score(y_test2, ovr_model_sparse2.predict(X_test_restrict2))
+AUC_table2
+```
+
+**Fig 16. ROC for different models for AD vs. MCI**
+<img src="https://yueli1201.github.io/Alzheimer/figures/16.png" alt="16" width="750"/>
 
 # Conclusion
+
+
 
 # Future Work
 

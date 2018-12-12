@@ -5,10 +5,9 @@ description: "Exploratory data analysis"
 header-img: "img/home-bg.jpg"
 ---
 
-### _The general EDA questions we want to explore are:_
-### _How AD, MCI, and CN distribute across different variables?_
-### _What variables contribute significantly to the classification of AD, MCI, and CN?_
-
+#### _The general EDA questions we want to explore are:_
+#### _How AD, MCI, and CN distribute across different variables?_
+#### _What variables contribute significantly to the classification of AD, MCI, and CN?_
 
 ## Data Description
 
