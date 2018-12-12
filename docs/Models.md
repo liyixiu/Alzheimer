@@ -474,5 +474,50 @@ Test_accuracy_best_depth2 = accuracy_score(y_test2, best_tree2.predict(X_test2))
 Test_accuracy_best_depth2
 ```
 
-**Fig 13. Times that each feature is used at the top node**
+**Fig 13. Accuracy vs. depth of decision tree**
 <img src="https://yueli1201.github.io/Alzheimer/figures/13.tiff" alt="13" width="750"/>
+
+### 2.5 Boosting
+
+Training set and test set both had pretty high accuracy score with the iteration from 0 to 800. While it kept increasing with the iteration for training set and reached 1 around iteration = 300, the score basically showed a decreasing trend for test set and reached highest when iteration is around 50. The data suggest that overfitting may happen lightly when iteration is really high, but in general, the model did a terrific job since both of the scores are over 0.9.
+
+```python
+#boosting
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+
+AdaBoost2 = AdaBoostClassifier(base_estimator=DecisionTreeClassifier(max_depth=2),
+                           n_estimators=800,learning_rate=0.05)
+AdaBoost_model2=AdaBoost2.fit(X_train2,y_train2)
+
+#Plot Iteration based score
+train_scores = list(AdaBoost2.staged_score(X_train2,y_train2))
+test_scores = list(AdaBoost2.staged_score(X_test2, y_test2))
+
+plt.plot(train_scores,label='train')
+plt.plot(test_scores,label='test')
+plt.xlabel('Iteration')
+plt.ylabel('Accuracy')
+plt.title("Variation of Accuracy with Iterations")
+plt.legend()
+
+print(AdaBoost2.score(X_train2, y_train2))
+print(AdaBoost2.score(X_test2, y_test2))
+```
+
+**Fig 14. Variation of Accuracy with Iterations**
+<img src="https://yueli1201.github.io/Alzheimer/figures/14.tiff" alt="14" width="750"/>
+
+### 2.6 Quadratic discriminant analysis (QDA)
+
+Using QDA to analyze our model, we got accuracy scores for the training set and test set, which are 0.934, 0.865, respectively.
+
+```python
+## qda
+qda = QuadraticDiscriminantAnalysis(store_covariance=True)
+qda_model2 = QuadraticDiscriminantAnalysis(store_covariance=True).fit(X_train2,y_train2)
+
+print('Accuracy score using QDA method for training set is', accuracy_score(y_train2, qda_model2.predict(X_train2)))
+print('Accuracy score using QDA method for test set is', accuracy_score(y_test2, qda_model2.predict(X_test2)))
+```
