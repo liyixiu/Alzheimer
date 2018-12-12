@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Results and Conclusion"
+title: "Results & Conclusion"
 description: "???"
 header-img: "img/home-bg.jpg"
 ---
