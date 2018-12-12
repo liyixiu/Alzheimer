@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "AReferences"
+title: "References"
 description: "Collaborators working on this project."
 header-img: "img/home-bg.jpg"
 ---
