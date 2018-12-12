@@ -4,7 +4,6 @@ title: "Literature Review"
 description: "literature review and related work"
 header-img: "img/home-bg.jpg"
 ---
-# Literature review and related work 
 
 ## 1. What is Alzheimer’s disease?
 Alzheimer's is the most common cause of dementia, a general term for memory loss and other cognitive abilities serious enough to interfere with daily life. Alzheimer's disease accounts for 60 percent to 80 percent of dementia cases. The cause of Alzheimer's disease is poorly understood. About 70% of the risk is believed to be genetic with many genes usually involved. Other risk factors include a history of head injuries, depression or hypertension. The disease process is associated with plaques and tangles in the brain.
