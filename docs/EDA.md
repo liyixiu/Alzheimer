@@ -131,7 +131,7 @@ See **Fig 1**\\
 Deleted variables are: ['PIB']
 
 **Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
-<img src="./figures/1.jpeg" alt="1" width="800"/>
+<img src="https://yueli1201.github.io/Alzheimer/figures/1.jpeg" alt="1" width="750"/>
 
 ## Correlation Analysis of Variables
 
