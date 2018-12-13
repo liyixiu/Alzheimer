@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Introduction"
-description: "Overview, motivation, aims, and challenges"
+title: "Alzheimer’s == True"
+description: "Classification of Alzheimer’s Disease with Regression Models and Machine Learning Algorithms"
 header-img: "img/home-bg.jpg"
 ---
 
