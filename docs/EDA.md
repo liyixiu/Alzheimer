@@ -114,8 +114,8 @@ print(len(list(df5.columns))-len(list(df6.columns)), 'variables are deleted.')
 print('Deleted variables are:', bad2)
 ```
 
-**Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/1.jpeg" alt="1" width="750"/>
+**Fig 1. Completeness of dataset after dropping unnecessary variables and observations**
 
 ## Correlation Analysis of Variables
 
@@ -130,8 +130,8 @@ sns.heatmap(corr, mask=np.zeros_like(corr, dtype=np.bool), cmap=sns.diverging_pa
 plt.show()
 ```
 
-**Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/2.jpeg" alt="2" width="750"/>
+**Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**
 
 ## Distribution Exploration for Variables Grouped by Disease Status
 
@@ -155,8 +155,8 @@ for i in range(len(continuous)):
     ax[i].set_xticklabels(['CN', 'MCI','AD'])
 ```
 
-**Fig 3. Distribution of continuous variables grouped by disease status**
 <img src="https://yueli1201.github.io/Alzheimer/figures/3.jpeg" alt="3" width="750"/>
+**Fig 3. Distribution of continuous variables grouped by disease status**
 
 ```python
 covariates = ['APOE4', 'PTGENDER', 'PTETHCAT', 'PTRACCAT', 'PTMARRY'] 
@@ -181,8 +181,8 @@ for i in covariates:
         a = a + 1
 ```
 
-**Fig 4. Distribution of categorical variables grouped by disease status**
 <img src="https://yueli1201.github.io/Alzheimer/figures/4.jpeg" alt="4" width="750"/>
+**Fig 4. Distribution of categorical variables grouped by disease status**
 
 According to the bar charts, the three health status have different distribution on demographic features. AD has a higher distribution in male, non-Hispanic, especially white, married people, and with APOE4=1. However, we are not sure about the determinants of classification yet since the results may due to the sampling method.
 
