@@ -28,8 +28,8 @@ accuracy_table.loc['optimal logistic',r'$ accuracy(test)$']=accuracy_score(y_tes
 accuracy_table
 ```
 
-<div align="center"><font size="2"><b>Table 1. Accuracy table (Disease vs. Non-disease)</b></font></div><br/>
-<img src="https://yueli1201.github.io/Alzheimer/figures/t1.png" alt="t1" width="350"/>
+<div align="center"><font size="2"><b>Table 1. Accuracy table (Disease vs. Non-disease)</b></font></div>
+<div align="center"><img src="https://yueli1201.github.io/Alzheimer/figures/t1.png" alt="t1" width="350"/></div>
 
 However, accuracy score alone just told us the predictive capability of models, thus ROC curve and AUC calculations were further explored to provide the information of classification. While the baseline logistic model gave the lowest classification performance, the other models all have pretty good AUC score. We will choose random forest and boosting as our final models as they have excellent performance in both reproducibility and classification.
 
@@ -102,8 +102,8 @@ accuracy_table.loc['optimized logistic',r'$ accuracy(test)$']=accuracy_score(y_t
 accuracy_table
 ```
 
-<div align="center"><font size="2"><b>Table 2. Accuracy table (AD vs. MCI)</b></font></div><br/>
-<img src="https://yueli1201.github.io/Alzheimer/figures/t2.png" alt="t2" width="350"/>
+<div align="center"><font size="2"><b>Table 2. Accuracy table (AD vs. MCI)</b></font></div>
+<div align="center"><img src="https://yueli1201.github.io/Alzheimer/figures/t2.png" alt="t2" width="350"/></div>
 
 In terms of classification performance, we drew ROC curved to visualize the comparisons and calculated corresponding AUC for each model. As we could see, random forest and boosting performed the best for both accuracy score and AUC.
 
@@ -162,6 +162,6 @@ AUC_table2
 3. To make it a cost-efficient classification method, we wanted to use as less predictors as possible. From the optimized logistic regression model, we can see a single predictor, CDRSB, is good enough to discriminate patients and non-patients. As for the discrimination of AD and MCI, CDRSB, MMSE are needed. Based on our models, we recommended healthcare providers to consider CDRSB as the first choice to help them diagnose AD.
 
 # Future Work
-1. More robust cross-validation
+1. More robust cross-validation.
 We split our dataset into train and test data, and cross validated our models within the ADNI dataset. If we have access to other database, we can use external data to test the performance of our model.
 2. Use longitudinal data to create risk prediction model. Currently, we only used the baseline data for the classification of disease vs. non-disease and AD vs. MCI. In the future, we can use survival analysis to build up risk prediction model to help people predict their risks of developing AD in advance.
