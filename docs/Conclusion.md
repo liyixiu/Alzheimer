@@ -7,7 +7,7 @@ header-img: "img/home-bg.jpg"
 
 # Results
 
-## Comparation of models for disease (MCI and AD) vs. non-disease
+## Comparison of models for disease (MCI and AD) vs. non-disease
 
 To compare the performance of reproducibility and classification for the above models, we printed an accuracy table and drew a ROC curve. 
 The accuracy table showed except for the baseline logistic regression model, the other models all generated excellent accuracy score for both training and test dataset. Scores for the training set are always higher than the test set.
