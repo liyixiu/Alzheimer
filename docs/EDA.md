@@ -115,7 +115,7 @@ print('Deleted variables are:', bad2)
 ```
 
 <img src="https://yueli1201.github.io/Alzheimer/figures/1.jpeg" alt="1" width="750"/>
-<font size="10"><b>Fig 1. Completeness of dataset after dropping unnecessary variables and observations</b></font>
+<font size="2"><b>Fig 1. Completeness of dataset after dropping unnecessary variables and observations</b></font>
 
 ## Correlation Analysis of Variables
 
