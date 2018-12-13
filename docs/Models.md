@@ -10,14 +10,14 @@ header-img: "img/home-bg.jpg"
 1.1 Baseline (Simple logistic regression model)
 1.2 Optimized logistic regression model
 1.3 Random forest
-1.4 Dicision tree
+1.4 Decision tree
 1.5 Boosting
 1.6 Quadratic discriminant analysis (QDA)
 2. MCI vs. AD
 2.1 Baseline (Simple logistic regression model)
 2.2 Optimized logistic regression model
 2.3 Random forest
-2.4 Dicision tree
+2.4 Decision tree
 2.5 Boosting
 2.6 Quadratic discriminant analysis (QDA)
 
@@ -35,8 +35,6 @@ ovr_model=LogisticRegressionCV(multi_class = 'ovr', cv=5).fit(X_train1,y_train1)
 print('The accuracy in training dataset is '+"{}".format(ovr_model.score(X_train1, y_train1)))
 print('The accuracy in testing dataset is '+"{}".format(ovr_model.score(X_test1, y_test1)))
 ```
-The accuracy in training dataset is 0.7328621908127209\\
-The accuracy in testing dataset is 0.7231638418079096\\
 
 ### 1.2 Optimized logistic regression model
 
@@ -82,8 +80,6 @@ ovr_model_sparse=LogisticRegressionCV(multi_class = 'ovr', cv=5).fit(X_train_res
 print('The accuracy in training dataset is '+"{}".format(ovr_model_sparse.score(X_train_restrict, y_train1)))
 print('The accuracy in testing dataset is '+"{}".format(ovr_model_sparse.score(X_test_restrict, y_test1)))
 ```
-The accuracy in training dataset is 0.9780918727915194\\
-The accuracy in testing dataset is 0.963276836158192\\
 
 ### 1.3 Random forest
 
@@ -131,9 +127,6 @@ accuracy_rf1_best = accuracy_score(y_pred_rf1_best, y_test1)
 print('Accuracy score for random random forest model is', accuracy_rf1)
 print('Accuracy score for best random forest model is', accuracy_rf1_best)
 ```
-Accuracy score for random random forest model is 0.9576271186440678\\
-Accuracy score for best random forest model is 0.96045197740113\\
-
 ```python
 ### ROC for baseline random forest
 fpr11, tpr11, thres11 = roc_curve(y_test1, rf1.predict_proba(X_test1)[:,1])
@@ -190,7 +183,7 @@ plt.show()
 **Fig 7. Times that each feature is used at the top node**
 <img src="https://yueli1201.github.io/Alzheimer/figures/7.jpeg" alt="7" width="750"/>
 
-### 1.4 Dicision tree
+### 1.4 Decision tree
 
 According to the graph, the tree achieved the highest cross-validation score at depth=2, therefore, we chose depth=2 for our final decision tree model. Our model yielded 0.978 and 0.963 accuracy rate on train and test dataset respectively.
 
@@ -308,7 +301,7 @@ print('The accuracy in testing dataset is '+"{}".format(ovr_model2.score(X_test2
 
 ### 2.2 Optimized logistic regression model
 
-Forward selection was used again to select predictors. The graph below described the accuracy of the models that we get through forward selection. With CDRSB, the model’s accuracy achieved 0.9. By adding MMSE, EcogSPMem, the accuracy of the model get to 0.95. After that, adding more predictors makes the accuracy rate fluctuating within 0.94 to 0.96. And after we started to introduce predictors, such as FAQ, Entorhinal, MidTemp etc., the accuracy of the model started to go down. The accuracy decreased to 0.796 when we include the predictors. This is because that some of our predictors are correlated with others, which caused the calculation matrix irreversible, and therefore the model had a poor performance. Therefore, we chose CDRSB, MMSE and EcogSPMem as predictors in our optimized multinomial logistic regression.
+Forward selection was used again to select predictors. The graph below described the accuracy of the models that we get through forward selection. With CDRSB, the model’s accuracy achieved 0.9. By adding MMSE, EcogSPMem, the accuracy of the model get to 0.95. After that, adding more predictors makes the accuracy rate fluctuating within 0.94 to 0.96. And after we started to introduce predictors, such as FAQ, Entorhinal, MidTemp etc., the accuracy of the model started to go down. The accuracy decreased to 0.796 when we include the predictors. This is because that some of our predictors are correlated with others, which caused the calculation matrix irreversible, and therefore the model had a poor performance. Therefore, we chose CDRSB, MMSE and EcogSPMem as predictors in our optimized logistic regression.
 
 ```python
 ##LogisticRegression Best
@@ -425,7 +418,7 @@ plt.show()
 **Fig 12. Times that each feature is used at the top node**
 <img src="https://yueli1201.github.io/Alzheimer/figures/12.jpeg" alt="12" width="750"/>
 
-### 2.4 Dicision tree
+### 2.4 Decision tree
 
 The model achieved the highest cross-validation score at depth=2, therefore, we chose depth=2 for our final decision tree model.
 
