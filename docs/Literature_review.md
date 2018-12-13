@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Literature Review"
-description: "literature review and related work"
+description: "Literature review and related work"
 header-img: "img/home-bg.jpg"
 ---
 
