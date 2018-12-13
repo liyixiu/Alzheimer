@@ -6,7 +6,6 @@ header-img: "img/home-bg.jpg"
 ---
 
 # Literature
-<br/>
 1. Zhang, D., Shen, D. and Alzheimer's Disease Neuroimaging Initiative, 2012. Multi-modal multi-task learning for joint prediction of multiple regression and classification variables in Alzheimer's disease. NeuroImage, 59(2), pp.895-907.
 2. Vemuri, P., Gunter, J.L., Senjem, M.L., Whitwell, J.L., Kantarci, K., Knopman, D.S., Boeve, B.F., Petersen, R.C. and Jack Jr, C.R., 2008. Alzheimer's disease diagnosis in individual subjects using structural MR images: validation studies. Neuroimage, 39(3), pp.1186-1197.
 3. Marson, D.C., Hawkins, L., McInturff, B. and Harrell, L.E., 1997. Cognitive models that predict physician judgments of capacity to consent in mild Alzheimer's disease. Journal of the American Geriatrics Society, 45(4), pp.458-464.
@@ -21,7 +20,6 @@ header-img: "img/home-bg.jpg"
 12. Wulfsohn, M.S. and Tsiatis, A.A., 1997. A joint model for survival and longitudinal data measured with error. Biometrics, pp.330-339.
 
 # Database
-<br/>
 ADNI Database. Alzheimer's Disease Neruoimaging Intiative.
 (Download Study Data - Study Info - All Data & Database - Key ADNI tables merged into one table)
 
