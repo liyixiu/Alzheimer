@@ -504,7 +504,7 @@ print(AdaBoost2.score(X_test2, y_test2))
 
 **Fig 14. Variation of Accuracy with Iterations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/14.tiff" alt="14" width="500"/>
-<a name="aaa"> </a>
+<a name="2.6"> </a>
 ### 2.6 Quadratic discriminant analysis (QDA)
 
 Using QDA to analyze our model, we got accuracy scores for the training set and test set, which are 0.934, 0.865, respectively.
