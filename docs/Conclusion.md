@@ -102,7 +102,8 @@ accuracy_table.loc['optimized logistic',r'$ accuracy(test)$']=accuracy_score(y_t
 accuracy_table
 ```
 
-**Table 2. Accuracy table (AD vs. MCI)**\
+**Table 2. Accuracy table (AD vs. MCI)**
+
 <img src="https://yueli1201.github.io/Alzheimer/figures/t2.png" alt="t2" width="350"/>
 
 In terms of classification performance, we drew ROC curved to visualize the comparisons and calculated corresponding AUC for each model. As we could see, random forest and boosting performed the best for both accuracy score and AUC.
