@@ -80,8 +80,8 @@ AUC_table.loc['optimized logistic',r'$ AUC $']=accuracy_score(y_test1, ovr_model
 AUC_table
 ```
 
+<img src="https://yueli1201.github.io/Alzheimer/figures/15.jpeg" alt="15" width="750"/></br>
 **Fig 15. ROC for different models for disease vs. non-disease**
-<img src="https://yueli1201.github.io/Alzheimer/figures/15.jpeg" alt="15" width="750"/>
 
 ## Comparison of models for AD vs. MCI
 
@@ -155,8 +155,8 @@ AUC_table2.loc['optimized logistic',r'$ AUC $']=accuracy_score(y_test2, ovr_mode
 AUC_table2
 ```
 
+<img src="https://yueli1201.github.io/Alzheimer/figures/16.jpeg" alt="16" width="750"/></br>
 **Fig 16. ROC for different models for AD vs. MCI**
-<img src="https://yueli1201.github.io/Alzheimer/figures/16.jpeg" alt="16" width="750"/>
 
 # Conclusion
 
