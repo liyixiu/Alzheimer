@@ -396,7 +396,7 @@ plt.legend()
 plt.show()
 ```
 
-**Fig 11. Variation of Accuracy with Iterations**
+**Fig 11. ROC curves for random forest model (AD vs. MCI)**
 <img src="https://yueli1201.github.io/Alzheimer/figures/11.tiff" alt="11" width="450"/>
 
 We also learned that FAQ, MMSE, CDRSB contributed the most in classifying AD and MCI.
