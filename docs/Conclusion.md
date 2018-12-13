@@ -29,6 +29,7 @@ accuracy_table
 ```
 
 **Table 1. Accuracy table (Disease vs. Non-disease)**
+
 <img src="https://yueli1201.github.io/Alzheimer/figures/t1.png" alt="t1" width="350"/>
 
 However, accuracy score alone just told us the predictive capability of models, thus ROC curve and AUC calculations were further explored to provide the information of classification. While the baseline logistic model gave the lowest classification performance, the other models all have pretty good AUC score. We will choose random forest and boosting as our final models as they have excellent performance in both reproducibility and classification.
@@ -158,7 +159,7 @@ AUC_table2
 <img src="https://yueli1201.github.io/Alzheimer/figures/16.jpeg" alt="16" width="750"/>
 
 # Conclusion
-
+<br>
 1. The classification models for disease vs. non-disease performed better than the classification models for AD vs. MCI. This is due to the fact that it is hard to differentiate AD and MCI. An AD patient may be diagnosed as MCI by another doctor. 
 2. For disease vs. non-disease classification model, boosting yield the highest accuracy rate as well the highest area under the curve (AUC) score. For AD vs. MCI classification model, random forest had a high accuracy rate and the highest AUC score. 
 3. To make it a cost-efficient classification method, we wanted to use as less predictors as possible. From the optimized logistic regression model, we can see a single predictor, CDRSB, is good enough to discriminate patients and non-patients. As for the discrimination of AD and MCI, CDRSB, MMSE are needed. Based on our models, we recommended healthcare providers to consider CDRSB as the first choice to help them diagnose AD.
