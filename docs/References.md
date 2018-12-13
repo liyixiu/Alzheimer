@@ -1,11 +1,11 @@
 ---
 layout: page
 title: "References"
-description: "literature and database???"
+description: "literature and database"
 header-img: "img/home-bg.jpg"
 ---
 
-# Reference
+# Literature
 
 1. Zhang, D., Shen, D. and Alzheimer's Disease Neuroimaging Initiative, 2012. Multi-modal multi-task learning for joint prediction of multiple regression and classification variables in Alzheimer's disease. NeuroImage, 59(2), pp.895-907.
 2. Vemuri, P., Gunter, J.L., Senjem, M.L., Whitwell, J.L., Kantarci, K., Knopman, D.S., Boeve, B.F., Petersen, R.C. and Jack Jr, C.R., 2008. Alzheimer's disease diagnosis in individual subjects using structural MR images: validation studies. Neuroimage, 39(3), pp.1186-1197.
@@ -19,3 +19,10 @@ header-img: "img/home-bg.jpg"
 10. Risacher, S.L., Saykin, A.J., Wes, J.D., Shen, L., Firpi, H.A. and McDonald, B.C., 2009. Baseline MRI predictors of conversion from MCI to probable AD in the ADNI cohort. Current Alzheimer Research, 6(4), pp.347-361.
 11. Hinrichs, C., Singh, V., Xu, G., Johnson, S.C. and Alzheimers Disease Neuroimaging Initiative, 2011. Predictive markers for AD in a multi-modality framework: an analysis of MCI progression in the ADNI population. Neuroimage, 55(2), pp.574-589.
 12. Wulfsohn, M.S. and Tsiatis, A.A., 1997. A joint model for survival and longitudinal data measured with error. Biometrics, pp.330-339.
+
+# Database
+
+ADNI Database. Alzheimer's Disease Neruoimaging Intiative.
+(Download Study Data - Study Info - All Data & Database - Key ADNI tables merged into one table)
+
+[Click to view source.](http://adni.loni.usc.edu)

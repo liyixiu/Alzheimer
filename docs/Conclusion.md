@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Results & Conclusion"
-description: "???"
+description: "Implications and future work"
 header-img: "img/home-bg.jpg"
 ---
 
@@ -83,7 +83,7 @@ AUC_table
 **Fig 15. ROC for different models for disease vs. non-disease**
 <img src="https://yueli1201.github.io/Alzheimer/figures/15.jpeg" alt="15" width="750"/>
 
-## Comparation of models for AD vs. MCI vs. non-disease
+## Comparation of models for AD vs. MCI
 
 Likewise, we printed an accuracy table and a ROC curve to compare the performance of reproducibility and classification for the above models. Similar to the previous comparison, baseline logistic gave the lowest accuracy score, while random forest, boosting still have the highest performance in terms of reproducibility.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Models"
-description: "Classification models for disease vs. non-disease participants & Classification models for AD vs. MCI"
+description: "Classification models for disease vs. non-disease and AD vs. MCI"
 header-img: "img/home-bg.jpg"
 ---
 
