@@ -7,26 +7,29 @@ header-img: "img/home-bg.jpg"
 
 # Contents
 
+<a href="#1.">1. Disease (MCI and AD) vs. Non-diseases</a><br/>
+<a href="#1.1">    1.1 Baseline (Simple logistic regression model)</a><br/>
+<a href="#1.2">    1.2 Optimized logistic regression model</a><br/>
+<a href="#1.3">    1.3 Random forest</a><br/>
+<a href="#1.4">    1.4 Decision tree</a><br/>
+<a href="#1.5">    1.5 Boosting</a><br/>
+<a href="#1.6">    1.6 Quadratic discriminant analysis (QDA)</a><br/>
+<a href="#2.">2. MCI vs. AD</a><br/>
+<a href="#2.1">    2.1 Baseline (Simple logistic regression model)</a><br/>
+<a href="#2.2">    2.2 Optimized logistic regression model</a><br/>
+<a href="#2.3">    2.3 Random forest</a><br/>
+<a href="#2.4">    2.4 Decision tree</a><br/>
+<a href="#2.5">    2.5 Boosting</a><br/>
+<a href="#2.6">    2.6 Quadratic discriminant analysis (QDA)</a><br/>
 
-1. Disease (MCI and AD) vs. Non-diseases
-1.1 Baseline (Simple logistic regression model)
-1.2 Optimized logistic regression model
-1.3 Random forest
-1.4 Decision tree
-1.5 Boosting
-1.6 Quadratic discriminant analysis (QDA)
-2. MCI vs. AD
-2.1 Baseline (Simple logistic regression model)
-2.2 Optimized logistic regression model
-2.3 Random forest
-2.4 Decision tree
-2.5 Boosting
-<a href="#2.6">2.6 Quadratic discriminant analysis (QDA)</a><br/>
 
+
+<a name="1."> </a>
 
 ## 1. Disease (MCI and AD) vs. Non-diseases
 
 On the basis of a criterion for the quality of life and intervention decision, distinguishing disease from non-disease is of great importance. Thus, we provided 6 ways to conduct the classification including logistic regression, random forest, decision tree, boosting, QDA, and random forest models.
+<a name="1.1"> </a>
 
 ### 1.1 Baseline (Simple logistic regression model)
 We fitted the logistic regression model with split train and test dataset. With all covariates, we got an accuracy score of 0.733 for the training set and 0.723 for the test set.
@@ -38,6 +41,7 @@ ovr_model=LogisticRegressionCV(multi_class = 'ovr', cv=5).fit(X_train1,y_train1)
 print('The accuracy in training dataset is '+"{}".format(ovr_model.score(X_train1, y_train1)))
 print('The accuracy in testing dataset is '+"{}".format(ovr_model.score(X_test1, y_test1)))
 ```
+<a name="1.2"> </a>
 
 ### 1.2 Optimized logistic regression model
 
@@ -83,6 +87,7 @@ ovr_model_sparse=LogisticRegressionCV(multi_class = 'ovr', cv=5).fit(X_train_res
 print('The accuracy in training dataset is '+"{}".format(ovr_model_sparse.score(X_train_restrict, y_train1)))
 print('The accuracy in testing dataset is '+"{}".format(ovr_model_sparse.score(X_test_restrict, y_test1)))
 ```
+<a name="1.3"> </a>
 
 ### 1.3 Random forest
 
@@ -185,6 +190,7 @@ plt.show()
 
 **Fig 7. Times that each feature is used at the top node**
 <img src="https://yueli1201.github.io/Alzheimer/figures/7.jpeg" alt="7" width="750"/>
+<a name="1.4"> </a>
 
 ### 1.4 Decision tree
 
@@ -238,6 +244,7 @@ print('The accuracy score with best depth for train set is', Training_accuracy_b
 
 **Fig 8. Accuracy rate vs. the depth of the tree**
 <img src="https://yueli1201.github.io/Alzheimer/figures/8.tiff" alt="8" width="500"/>
+<a name="1.5"> </a>
 
 ### 1.5 Boosting
 
@@ -270,6 +277,7 @@ print(AdaBoost.score(X_test1, y_test1))
 
 **Fig 9. Variation of Accuracy with Iterations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/9.tiff" alt="9" width="500"/>
+<a name="1.6"> </a>
 
 ### 1.6 Quadratic discriminant analysis (QDA)
 
@@ -285,10 +293,12 @@ qda_model = QuadraticDiscriminantAnalysis(store_covariance=True).fit(X_train1,y_
 print('Accuracy score using QDA method for training set is', accuracy_score(y_train1, qda_model.predict(X_train1)))
 print('Accuracy score using QDA method for test set is', accuracy_score(y_test1, qda_model.predict(X_test1)))
 ```
+<a name="2."> </a>
 
 ## 2. MCI vs. AD
 
 Since MCI is a transitional phase from non-cognitive impairment to AD, the accurate diagnosis of AD and MCI is crucial for early intervention of cognitive impairment and for mitigating the progression of AD. Hence, we introduced regression and regression models to explore the best approach to classify AD and MCI.
+<a name="2.1"> </a>
 
 ### 2.1 Baseline (Simple logistic regression model)
 
@@ -301,6 +311,7 @@ ovr_model2=LogisticRegressionCV(multi_class = 'ovr', cv=5).fit(X_train2,y_train2
 print('The accuracy in training dataset is '+"{}".format(ovr_model2.score(X_train2, y_train2)))
 print('The accuracy in testing dataset is '+"{}".format(ovr_model2.score(X_test2, y_test2)))
 ```
+<a name="2.2"> </a>
 
 ### 2.2 Optimized logistic regression model
 
@@ -317,6 +328,7 @@ print('The accuracy in testing dataset is '+"{}".format(ovr_model_sparse2.score(
 
 **Fig 10. Accuracy for forward selection on prediction of MCI and AD**
 <img src="https://yueli1201.github.io/Alzheimer/figures/10.jpeg" alt="10" width="750"/>
+<a name="2.3"> </a>
 
 ### 2.3 Random forest
 
@@ -420,6 +432,7 @@ plt.show()
 
 **Fig 12. Times that each feature is used at the top node**
 <img src="https://yueli1201.github.io/Alzheimer/figures/12.jpeg" alt="12" width="750"/>
+<a name="2.4"> </a>
 
 ### 2.4 Decision tree
 
@@ -472,6 +485,7 @@ Test_accuracy_best_depth2
 
 **Fig 13. Accuracy vs. depth of decision tree**
 <img src="https://yueli1201.github.io/Alzheimer/figures/13.tiff" alt="13" width="500"/>
+<a name="2.5"> </a>
 
 ### 2.5 Boosting
 
@@ -505,6 +519,7 @@ print(AdaBoost2.score(X_test2, y_test2))
 **Fig 14. Variation of Accuracy with Iterations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/14.tiff" alt="14" width="500"/>
 <a name="2.6"> </a>
+
 ### 2.6 Quadratic discriminant analysis (QDA)
 
 Using QDA to analyze our model, we got accuracy scores for the training set and test set, which are 0.934, 0.865, respectively.
