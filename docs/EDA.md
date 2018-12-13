@@ -131,7 +131,7 @@ plt.show()
 ```
 
 <img src="https://yueli1201.github.io/Alzheimer/figures/2.jpeg" alt="2" width="750"/>
-**Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**
+<div align="center"><font size="2"><b>Fig 2. Correlation matrix including missing values after dropping unnecessary variables and observations**</b></font></div>
 
 ## Distribution Exploration for Variables Grouped by Disease Status
 
@@ -156,7 +156,7 @@ for i in range(len(continuous)):
 ```
 
 <img src="https://yueli1201.github.io/Alzheimer/figures/3.jpeg" alt="3" width="750"/>
-**Fig 3. Distribution of continuous variables grouped by disease status**
+<div align="center"><font size="2"><b>Fig 3. Distribution of continuous variables grouped by disease status</b></font></div>
 
 ```python
 covariates = ['APOE4', 'PTGENDER', 'PTETHCAT', 'PTRACCAT', 'PTMARRY'] 
@@ -182,7 +182,7 @@ for i in covariates:
 ```
 
 <img src="https://yueli1201.github.io/Alzheimer/figures/4.jpeg" alt="4" width="750"/>
-**Fig 4. Distribution of categorical variables grouped by disease status**
+<div align="center"><font size="2"><b>Fig 4. Distribution of categorical variables grouped by disease status</b></font></div>
 
 According to the bar charts, the three health status have different distribution on demographic features. AD has a higher distribution in male, non-Hispanic, especially white, married people, and with APOE4=1. However, we are not sure about the determinants of classification yet since the results may due to the sampling method.
 
