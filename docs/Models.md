@@ -6,6 +6,8 @@ header-img: "img/home-bg.jpg"
 ---
 
 # Contents
+
+
 1. Disease (MCI and AD) vs. Non-diseases
 1.1 Baseline (Simple logistic regression model)
 1.2 Optimized logistic regression model
@@ -19,7 +21,8 @@ header-img: "img/home-bg.jpg"
 2.3 Random forest
 2.4 Decision tree
 2.5 Boosting
-2.6 Quadratic discriminant analysis (QDA)
+<a href="#2.6">2.6 Quadratic discriminant analysis (QDA)</a><br/>
+
 
 ## 1. Disease (MCI and AD) vs. Non-diseases
 
@@ -501,7 +504,7 @@ print(AdaBoost2.score(X_test2, y_test2))
 
 **Fig 14. Variation of Accuracy with Iterations**
 <img src="https://yueli1201.github.io/Alzheimer/figures/14.tiff" alt="14" width="500"/>
-
+<a name="aaa"> </a>
 ### 2.6 Quadratic discriminant analysis (QDA)
 
 Using QDA to analyze our model, we got accuracy scores for the training set and test set, which are 0.934, 0.865, respectively.
