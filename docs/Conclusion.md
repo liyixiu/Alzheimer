@@ -80,7 +80,7 @@ AUC_table
 ```
 
 **Fig 15. ROC for different models for disease vs. non-disease**
-<img src="https://yueli1201.github.io/Alzheimer/figures/15.png" alt="15" width="750"/>
+<img src="https://yueli1201.github.io/Alzheimer/figures/15.jpeg" alt="15" width="750"/>
 
 ## Comparation of models for AD vs. MCI vs. non-disease
 
@@ -154,7 +154,7 @@ AUC_table2
 ```
 
 **Fig 16. ROC for different models for AD vs. MCI**
-<img src="https://yueli1201.github.io/Alzheimer/figures/16.png" alt="16" width="750"/>
+<img src="https://yueli1201.github.io/Alzheimer/figures/16.jpeg" alt="16" width="750"/>
 
 # Conclusion
 
