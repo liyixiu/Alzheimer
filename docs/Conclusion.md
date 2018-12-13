@@ -158,7 +158,9 @@ AUC_table2
 
 # Conclusion
 
-
+1. The classification models for disease vs. non-disease performed better than the classification models for AD vs. MCI. This is due to the fact that it is hard to differentiate AD and MCI. An AD patient may be diagnosed as MCI by another doctor. 
+2. For disease vs. non-disease classification model, boosting yield the highest accuracy rate as well the highest area under the curve (AUC) score. For AD vs. MCI classification model, random forest had a high accuracy rate and the highest AUC score. 
+3. To make it a cost-efficient classification method, we wanted to use as less predictors as possible. From the optimized logistic regression model, we can see a single predictor, CDRSB, is good enough to discriminate patients and non-patients. As for the discrimination of AD and MCI, CDRSB, MMSE are needed. Based on our models, we recommended healthcare providers to consider CDRSB as the first choice to help them diagnose AD.
 
 # Future Work
 
