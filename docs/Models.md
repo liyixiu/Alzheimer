@@ -8,8 +8,8 @@ header-img: "img/home-bg.jpg"
 # Contents
 
 <a href="#1.">1. Disease (MCI and AD) vs. Non-diseases</a><br/>
-<a href="#1.1">&nbsp;1.1 Baseline (Simple logistic regression model)</a><br/>
-<a href="#1.2">&nbsp;1.2 Optimized logistic regression model</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1">1.1 Baseline (Simple logistic regression model)</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2">1.2 Optimized logistic regression model</a><br/>
 <a href="#1.3">&nbsp;1.3 Random forest</a><br/>
 <a href="#1.4">&nbsp;1.4 Decision tree</a><br/>
 <a href="#1.5">&nbsp;1.5 Boosting</a><br/>
