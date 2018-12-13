@@ -1,20 +1,20 @@
 ---
 layout: page
 title: "Models"
-description: "Model fitting and tuning based on python"
+description: "Classification models for disease vs. non-disease participants & Classification models for AD vs. MCI"
 header-img: "img/home-bg.jpg"
 ---
 
 # Contents
 
-<a href="#1.">1. Disease (MCI and AD) vs. Non-diseases</a><br/>
+<a href="#1.">1. Models to distinguish Disease (MCI and AD) vs. Non-diseases participants</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1">1.1 Baseline (Simple logistic regression model)</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2">1.2 Optimized logistic regression model</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.3">1.3 Random forest</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.4">1.4 Decision tree</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.5">1.5 Boosting</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.6">1.6 Quadratic discriminant analysis (QDA)</a><br/>
-<a href="#2.">2. MCI vs. AD</a><br/>
+<a href="#2.">2. Models to distinguish MCI vs. AD participants</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.1">2.1 Baseline (Simple logistic regression model)</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.2">2.2 Optimized logistic regression model</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.3">2.3 Random forest</a><br/>

@@ -166,3 +166,7 @@ AUC_table2
 
 # Future Work
 
+1. More robust cross-validation
+We split our dataset into train and test data, and cross validated our models within the ADNI dataset. If we have access to other database, we can use external data to test the performance of our model.
+2.Use longitudinal data to create risk prediction model
+Currently, we only used the baseline data for the classification of disease vs. non-disease and AD vs. MCI. In the future, we can use survival analysis to build up risk prediction model to help people predict their risks of developing AD in advance.
